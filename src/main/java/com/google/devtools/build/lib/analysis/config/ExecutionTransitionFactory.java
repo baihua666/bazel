@@ -126,7 +126,9 @@ public class ExecutionTransitionFactory
 
       // Then unset isHost.
       CoreOptions coreOptions = checkNotNull(execOptions.get(CoreOptions.class));
-      coreOptions.isHost = false;
+      // coreOptions.isHost = false;
+      //fix mediapipe error
+      coreOptions.isHost = true;
       coreOptions.isExec = true;
       // Disable extra actions
       coreOptions.actionListeners = ImmutableList.of();
